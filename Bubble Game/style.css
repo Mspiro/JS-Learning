@@ -1,0 +1,33 @@
+/* Import Tailwind CSS */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.main {
+  @apply bg-gray-300 h-screen w-screen flex  justify-center items-center box-border;
+
+  .game-container {
+    @apply w-[90%] h-[500px] xl:max-w-[1024px] bg-white rounded-3xl overflow-hidden box-border;
+
+    .top-bar {
+      @apply flex bg-gray-400 justify-between px-[20%];
+
+      .top-bar-text {
+        @apply text-xl font-semibold text-green-950 flex gap-2 p-4;
+      }
+    }
+
+    .game-area{
+      @apply bg-gray-500 h-[calc(100%-60px)] p-4 py-8 flex justify-center items-center flex-wrap gap-4 flex-row box-border;
+
+      .circle {
+        @apply bg-slate-50 px-3 py-1 w-fit h-fit rounded-full cursor-pointer;
+      }
+    }
+  }
+}
